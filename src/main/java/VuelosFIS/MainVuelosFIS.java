@@ -8,7 +8,7 @@ package VuelosFIS;
  *
  * @author Lenovo
  */
-public class MainVuelos {
+public class MainVuelosFIS {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
