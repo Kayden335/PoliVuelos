@@ -10,4 +10,5 @@
         <maven.compiler.release>24</maven.compiler.release>
         <exec.mainClass>com.mycompany.polivuelos.PoliVuelos</exec.mainClass>
     </properties>
+    <name>VuelosFIS</name>
 </project>
