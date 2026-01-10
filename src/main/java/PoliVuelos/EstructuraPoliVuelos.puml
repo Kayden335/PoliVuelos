@@ -1,2 +1,68 @@
 @startuml
+skinparam classAttributeIconSize 0
+
+class Usuario {
+  -idUsuario : int
+  -nombre : String
+  -apellido : String
+  -email : String
+  -cedula : String
+  -telefono : String
+  +registrarse()
+  +iniciarSesion()
+  +buscarVuelos()
+}
+
+class Vuelo {
+  -idVuelo : int
+  -origen : String
+  -destino : String
+  -fecha : LocalDate
+  -horaSalida : LocalTime
+  -duracion : double
+  -precio : double
+  -tipo : String
+  +calcularDuracion()
+  +obtenerPrecio()
+}
+
+class Asiento {
+  -numero : String
+  -clase : String
+  -disponible : boolean
+  +reservar()
+  +liberar()
+}
+
+class Reserva {
+  -idReserva : int
+  -fechaReserva : LocalDate
+  -estado : String
+  -total : double
+  +confirmarReserva()
+  +cancelarReserva()
+  +calcularTotal()
+}
+
+class Pago {
+  -idPago : int
+  -metodoPago : String
+  -monto : double
+  -estadoPago : String
+  +procesarPago()
+  +validarPago()
+}
+
+class Aerolinea {
+  -idAerolinea : int
+  -nombre : String
+  -pais : String
+  +listarVuelos()
+}
+
+Usuario "1" -- "*" Reserva : realiza
+Reserva "1" -- "1" Vuelo : contiene
+Vuelo "1" -- "*" Asiento : tiene
+Reserva "1" -- "1" Pago : genera
+Aerolinea "1" -- "*" Vuelo : opera
 @enduml
