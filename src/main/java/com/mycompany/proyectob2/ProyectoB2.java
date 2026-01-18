@@ -12,8 +12,10 @@ import DestinoVista.DestinoVista;
  *
  * @author USUARIO
  */
-public class ProyectoB2 {
 
+//Pestaña destino y pasajeros
+public class ProyectoB2 {
+    
     public static void main(String[] args) {
         DestinoVista vista = new DestinoVista();
         DestinoModelo modelo = new DestinoModelo();
